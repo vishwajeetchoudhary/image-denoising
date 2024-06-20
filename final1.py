@@ -32,7 +32,7 @@ def save_image(image, path):
     image = (image * 255).cpu().numpy().astype(np.uint8)
     io.imsave(path, image.transpose(1, 2, 0))
 
-model_path = 'denoising_fine_tuned_model.pth'
+model_path = 'adapted_denoising.pth'
 model = DenoisingModel()
 model.load_state_dict(torch.load(model_path))
 
