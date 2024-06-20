@@ -152,4 +152,4 @@ torch.save(model.state_dict(), 'denoising1_model.pth')
 
 input_shape_full = (3, 400, 600)
 model_fine_tuned = train_model(low_folder, high_folder, val_low_folder, val_high_folder, crop_size, input_shape_full, image_size=(400, 600), fine_tune=True, model_path='denoising_best_model.pth')
-torch.save(model_fine_tuned.state_dict(), 'denoising_fine_tuned_model.pth')
+torch.save(model_fine_tuned.state_dict(), 'adapted_denoising.pth')
